@@ -1,0 +1,55 @@
+#printDiv {
+	min-height: 50px;
+	width:200px;
+	text-align: center;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+ul {
+
+	list-style: none;
+	margin-left:auto;
+	margin-right:auto;
+	width:200px;
+
+}
+
+li {
+	font-weight: bold;
+	font-family: Impact, Arial, sans-serif;
+	font-size:30px;
+}
+#inputContainer {
+	position:relative;
+	height:150px;
+
+}
+#textField {
+	padding-top:25px;
+	position:relative;
+	display:block;
+	width:200px;
+	height:150px;
+	margin-left: auto;
+	margin-right: auto;
+}
+button {
+	margin-top:16px;
+	position:relative;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+#num {
+	
+	display:block;
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+}
+#numLi {
+	text-align: center;
+	width:124px;
+}
