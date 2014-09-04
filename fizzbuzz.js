@@ -1,24 +1,23 @@
 
 $(document).ready(function (){
 
-//gets number entered in form
-var num = document.getElementById('num');
-var startingNum = num.value;
 
 
-//vars that will append div with fizzBuzz number to DOM
-var newLi = document.createElement('li');
-newLi.setAttribute('id', 'numLi');
-
-
+//vars that will append li with fizzBuzz number to DOM
+	var newLi = document.createElement('li');
+	newLi.setAttribute('id', 'numLi');
 
 	
 //prints fizzBuzz loop
 var loop = function () {
+
+	//gets number entered in form
+	var num = document.getElementById('num');
+	var startingNum = num.value;
+
 	for (startingNum; startingNum <= 100; startingNum++) {	
 
-		
-
+	
 		if ((startingNum%3==0)&&(startingNum%5==0)){
 			
 			newLi.innerHTML = 'fizzBuzz!!!';
