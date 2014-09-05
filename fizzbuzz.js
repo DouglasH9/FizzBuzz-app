@@ -13,36 +13,49 @@ var loop = function () {
 
 	//gets number entered in form
 	var num = document.getElementById('num');
-	var startingNum = num.value;
+	var enteredNum = + num.value;
+							
 
-	for (startingNum; startingNum <= 100; startingNum++) {	
+		for (var i = 1; i <= enteredNum; i++) {	
 
+			if (isNaN(+enteredNum)){
+
+				alert("That's not a number ya dingus!");
+			}
+
+			else if (enteredNum % 1 !== 0){
+
+				alert("Enter a whole number, silly pants!");
+				break;
+			}
+
+			else if ((i%3==0)&&(i%5==0)){
+			
+				newLi.innerHTML = 'fizzBuzz!!!';
+			}
+
+			else if (i%5==0){
+			
+				newLi.innerHTML = 'buzz';
+			}
+
+			else if (i%3==0){
+			
+				newLi.innerHTML= 'fizz';	
+			}
+
+			else {
+			
+				newLi.innerHTML = i;	
+			}
+		
 	
-		if ((startingNum%3==0)&&(startingNum%5==0)){
-			
-			newLi.innerHTML = 'fizzBuzz!!!';
-		}
-
-		else if (startingNum%5==0){
-			
-			newLi.innerHTML = 'buzz';
-		}
-
-		else if (startingNum%3==0){
-			
-			newLi.innerHTML= 'fizz';	
-		}
-
-		else {
-			
-			newLi.innerHTML = startingNum;	
-		}
 
 		document.getElementById('printOut').appendChild(newLi.cloneNode(true));
-		console.log (startingNum);
+		console.log (i);
 	}
-}
 
+}
 
 
 //adds onClick event listener to button
