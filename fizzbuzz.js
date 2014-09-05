@@ -50,6 +50,7 @@ var loop = function () {
 					newLi.innerHTML = i;	
 				}	
 
+			//appends fizzbuzz number to ul
 			document.getElementById('printOut').appendChild(newLi.cloneNode(true));
 			console.log (i);
 			}
