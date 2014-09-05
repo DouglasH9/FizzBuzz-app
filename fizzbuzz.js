@@ -15,6 +15,7 @@ var loop = function () {
 	var num = document.getElementById('num');
 	var enteredNum = + num.value;
 
+		//runs loop if number in form is a whole number
 		if (isNaN(enteredNum)){
 			alert("That's not a number ya dingus!");
 		}
