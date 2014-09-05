@@ -14,49 +14,47 @@ var loop = function () {
 	//gets number entered in form
 	var num = document.getElementById('num');
 	var enteredNum = + num.value;
-							
 
-		for (var i = 1; i <= enteredNum; i++) {	
+		if (isNaN(enteredNum)){
+			alert("That's not a number ya dingus!");
+		}
 
-			if (isNaN(+enteredNum)){
+		else{
 
-				alert("That's not a number ya dingus!");
-			}
+			for (var i = 1; i <= enteredNum; i++) {	
 
-			else if (enteredNum % 1 !== 0){
+				if (enteredNum % 1 !== 0){
 
-				alert("Enter a whole number, silly pants!");
-				break;
-			}
+					alert("Enter a whole number, silly pants!");
+					break;
+				}
 
-			else if ((i%3==0)&&(i%5==0)){
+				else if ((i%3==0)&&(i%5==0)){
 			
-				newLi.innerHTML = 'fizzBuzz!!!';
-			}
+					newLi.innerHTML = 'fizzBuzz!!!';
+				}
 
-			else if (i%5==0){
+				else if (i%5==0){
 			
-				newLi.innerHTML = 'buzz';
-			}
+					newLi.innerHTML = 'buzz';
+				}
 
-			else if (i%3==0){
+				else if (i%3==0){
 			
-				newLi.innerHTML= 'fizz';	
-			}
+					newLi.innerHTML= 'fizz';	
+				}
 
-			else {
+				else {
 			
-				newLi.innerHTML = i;	
+					newLi.innerHTML = i;	
+				}	
+
+			document.getElementById('printOut').appendChild(newLi.cloneNode(true));
+			console.log (i);
 			}
-		
-	
 
-		document.getElementById('printOut').appendChild(newLi.cloneNode(true));
-		console.log (i);
-	}
-
+		}
 }
-
 
 //adds onClick event listener to button
 document.getElementById('fizzEnter').addEventListener('click', loop);
